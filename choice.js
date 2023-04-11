@@ -1,17 +1,20 @@
+// First function to handle the player's choices in the first room
 function Direction(Choice){
-    
+    // Handle left or right choices
     if(Choice == "left" || Choice == "right"){
+        // Display a message and hide some buttons
         document.getElementById("result").innerHTML = "<br><br>A giant black spider descends from the ceiling!<br>You look up and it stares at you through bloody red eyes.<br> <br>Do you run for your life or stay?";
         document.getElementById('left1').style.display = 'none';
         document.getElementById("right1").style.display = 'none';
-        document.getElementById("escape1").style.display = 'none';
+        document.getElementById("escape1").style.display = 'none";
         document.getElementById("result").style.display = 'inline';
         document.getElementById('left2').style.display = 'inline';
         document.getElementById("right2").style.display = 'inline';
         document.getElementById("escape2").style.display = 'inline';
     }
-    
-    if(Choice == "escape"){
+    // Handle escape choice
+    else if(Choice == "escape"){
+        // Display a message and hide some buttons
         document.getElementById("result").innerHTML = "<br>GAME OVER<br><br>";
         document.getElementById('left1').style.display = 'none';
         document.getElementById("right1").style.display = 'none';
@@ -20,28 +23,30 @@ function Direction(Choice){
         document.getElementById("result").style.display = 'inline';
     }
 }
-        
-function Direction2(Choice){
 
-        if(Choice == 'left2'){
-            document.getElementById("result2").innerHTML = '<br>You run away from the spider and see two rooms.<br><br>Choose one to enter.<br>';
+// Second function to handle the player's choices in the second room
+function Direction2(Choice){
+    // Handle left2 choice
+    if(Choice == 'left2'){
+        // Display a message and show some buttons
+        document.getElementById("result2").innerHTML = '<br>You run away from the spider and see two rooms.<br><br>Choose one to enter.<br>';
         document.getElementById('left2').style.display = 'none';
         document.getElementById("right2").style.display = 'none';
         document.getElementById("escape2").style.display = 'none';
         document.getElementById("result2").style.display = 'inline';
         document.getElementById("B").style.display = 'inline';
         document.getElementById("C").style.display = 'inline';
-        
-        }
-        
-        if(Choice == 'right2'){
-            document.getElementById("result2").innerHTML = "<br>The spider caught you in its web.<br><br>You're trapped...<br><br>GAME OVER<br>";
+    }
+    // Handle right2 choice
+    else if(Choice == 'right2'){
+        // Display a message and hide some buttons
+        document.getElementById("result2").innerHTML = "<br>The spider caught you in its web.<br><br>You're trapped...<br><br>GAME OVER<br>";
         document.getElementById('left2').style.display = 'none';
         document.getElementById("right2").style.display = 'none';
         document.getElementById("escape2").style.display = 'none';
         document.getElementById("tryagain").style.display = 'inline';
         document.getElementById("result2").style.display = 'inline';
-        }
+    }
         
         if(Choice == 'escape2'){
             document.getElementById("result2").innerHTML = "<br>GAME OVER<br>";
